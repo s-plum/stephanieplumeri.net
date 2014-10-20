@@ -1,6 +1,6 @@
 #stephanieplumeri.net
 
-> Lack of version control makes me anxious.
+> Lack of version control makes me anxious. Git, meet [stephanieplumeri.net](http://stephanieplumeri.net).
 
 ##About this site
 
@@ -29,7 +29,19 @@ The end result of all of these new toys put the site on a major browser diet:
 | ------------------- | ----------------------- | ------------ | -------- | --------------- | -------------- | -------------- |
 | About (old)         | 2.17  				    | 16	       | 236      | 21688	        | 68104          | 116709         |
 | About (new)         | 1.125                   | 10           | 149      | 11114           | 29922          | 108053         |
-| **% change**        | **-16%**                | **-21%**     | **-26%** | **-40%**        | **-56%**       | **-7%**        |
+| **% change**        | **-48%**                | **-38%**     | **-37%** | **-49%**        | **-56%**       | **-7%**        |
+
+|                     | Load Time (seconds)     | Requests     | KB       | CSS (bytes)     | JS (bytes)     | Images (bytes) |
+| ------------------- | ----------------------- | ------------ | -------- | --------------- | -------------- | -------------- |
+| Portfolio (old)     | 1.745  				    | 33	       | 377      | 21688	        | 72419          | 255993         |
+| Portfolio (new)     | 1.462                   | 26           | 279      | 12911           | 29922          | 238290         |
+| **% change**        | **-16%**                | **-21%**     | **-26%** | **-40%**        | **-59%**       | **-7%**        |
+
+|                     | Load Time (seconds)     | Requests     | KB       | CSS (bytes)     | JS (bytes)     | Images (bytes) |
+| ------------------- | ----------------------- | ------------ | -------- | --------------- | -------------- | -------------- |
+| Resume (old)        | 1.954  				    | 16	       | 239      | 21688	        | 68104          | 116709         |
+| Resume (new)        | 1.094                   | 10           | 153      | 12250           | 29922          | 108462         |
+| **% change**        | **-48%**                | **-38%**     | **-37%** | **-49%**        | **-56%**       | **-7%**        |
 
 *stats from webpagetest.org*
 
