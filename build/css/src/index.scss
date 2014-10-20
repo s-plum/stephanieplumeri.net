@@ -1,0 +1,202 @@
+@import "partials/base", "plugins/plumcube",  url(http://fonts.googleapis.com/css?family=Roboto:100);
+/* =================================================================
+to do section
+================================================================= */
+#to-do {
+	background: #2c2c2c;
+	>div {
+		@include borderbox;
+		background: #0f0f0f;
+		color: #eee;
+		font-size: 15px;
+		font-size: rem(15);
+		font-family: 'Courier New', monospace;
+		padding: 5px 10px 10px;
+		@include breakpoint($end_mobile) {
+			border-left: 1px solid #606060;
+			bottom: 0;
+			font-size: 14px;
+			font-size: rem(14);
+			margin-left: 15px;
+			overflow-x: hidden;
+			overflow-y: auto;
+			position: absolute;
+			top: 21px;
+			top: rem(21);
+		}
+	}
+	h2 {
+		font-size: 15px;
+		font-size: rem(15);
+		font-weight: normal;
+		margin: 0 0 0 .75em;
+		@include breakpoint($end_mobile) {
+			font-size: 13px;
+			font-size: rem(13);
+		}
+	}
+	h3 {
+		color: #bbb;
+		font-size: 15px;
+		font-size: rem(15);
+		font-weight: normal;
+		margin: .5em 0 0;
+		&:before, &:after {
+			color: #749cdb;
+		}
+		&:before {
+			content: "<h1>";
+		}
+		&:after {
+			content: "</h1>";
+		}
+		@include breakpoint($end_mobile) {
+			font-size: 13px;
+			font-size: rem(13);
+		}
+	}
+	ul {
+		list-style: none;
+		margin-left: 2em;
+		li {
+			padding-left: 1em;
+			position: relative;
+			&:before {
+				content: "- ";
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	a {
+		color: #a486b7;
+		text-decoration: none;
+		&:hover, &:focus {
+			color: lighten(#a486b7, 20%);
+		}
+	}
+	ol {
+		color: #bbb;
+		&:before, &:after {
+			color: #749cdb;
+			display: block;
+		}
+		&:before {
+			content: "<ol>";
+		}
+		&:after {
+			content: "</ol>";
+		}
+		li {
+			text-indent: 2em;
+			&:before, &:after {
+				color: #749cdb;
+			}
+			&:before {
+				content: "<li>";
+			}
+			&:after {
+				content: "</li>";
+			}
+		}
+	}
+	@include breakpoint($end_mobile) {
+		height: 65%;
+		margin-top: 10px;
+		position: absolute;
+		width: 66%;
+		z-index: 2;
+		-moz-transform: rotate(.001deg);
+	}
+}
+
+#plumcube {
+	@include breakpoint($end_mobile) {
+		height: 350px;
+		position: absolute;
+		right: 20px;
+		top: 25%;
+		width: 375px;
+		
+		@media screen and (min-height: 500px) {
+			top: 30%;
+		}
+	}
+	>div {
+		overflow: hidden;
+		position: relative;
+	}
+	a {
+		display: block;
+		font: 100 4em/1em 'Roboto','Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		text-decoration: none;
+		text-indent: -9999em;
+		width: 100%;
+		z-index: 2;
+		&:after {
+			color: $purple_dk;
+			content: "plumcube";
+			display: block;
+			opacity: 0;
+			position: relative;
+			text-align: center;
+			text-indent: 0;		
+			text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+			@include transition(all 200ms linear);
+			top: 5%;
+			@include breakpoint($large_mobile) {
+				top: 15%;
+			}
+			@include breakpoint($end_mobile) {
+				top: 20%;
+			}
+		}
+		&:hover:after, &:focus:after {
+			opacity: 1;
+		}
+	}
+}
+
+/* =================================================================
+plumcube
+================================================================= */
+/* cube styles */
+.cube {
+    @include plumcube(100, 100, 100, 1200, 50%); /* cube it up */
+    margin: 50px auto;
+	z-index: 1;
+	@include breakpoint($large_mobile) {
+	    @include plumcube(200, 200, 200, 1200, 50%); /* cube it up */
+	    margin: 60px auto 50px;
+	}
+}
+.cube-x {
+    @include transform(rotateX(10deg));
+}
+.cube-x li {
+    opacity: .5;
+}
+.spin-y {
+	@include spincube(y, 5s);
+}
+.one {
+    background: #f00;
+}
+.two {
+    background: #ff0;
+}
+.three {
+    background: #ff00ff;
+}
+.four {
+    background: #123456;
+}
+.five {
+    background: #dd0000;
+}
+.six {
+    background: #000;
+}

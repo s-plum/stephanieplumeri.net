@@ -1,0 +1,83 @@
+<section id="drive" data-draggable="true">
+	<span class="ui"><a class="tab1 active" href="#">Resume - Plum Drive</a><a class="tab2" href="http://www.youtube.com/embed/ZpjTZ8MRSew?enablejsapi=1">PlumTube</a></span>
+	<h1>Resume</h1>
+	<div id="resume-content">
+		<div class="document">
+			<p><a id="resume-pdf" href="/docs/stephanie-plumeri-resume.pdf">Resume PDF</a></p>
+			<h2>Professional Summary</h2>
+			<ul>
+				<li>Web developer and graphic designer skilled in HTML5, CSS3, SASS/SCSS, jQuery/Javascript, Photoshop, Illustrator, InDesign, Final Cut Pro, social media platforms (Facebook, Twitter, Tumblr, LinkedIn, YouTube), blog platforms (Wordpress, Blogger)</li>
+			    <li>Responsive Web Jedi</li>
+			    <li>Passionate about web standards and accessibility, and the application of these concepts to responsive and mobile web development</li>
+			    <li>Knowledge of and industry experience in social media marketing, emerging media platforms, and integration of social sharing elements into web environments</li>
+			    <li>Familiar with time-sensitive assignments, collaborative work efforts, and seeing project development through multiple rounds of client revisions</li>
+			    <li>Obsessive baker with an extensive repertoire of dessert recipes and a tendency to leave Tupperware full of chocolatey goodness in the office break room</li>
+			</ul>
+			<hr/>
+			<h2>Education</h2>
+			<p><strong>Muhlenberg College</strong>, Allentown, PA
+            <ul>
+                <li>September 2008 - May 2012</li>
+                <li>Bachelor of Arts, Media &amp; Communication (with High Honors), Economics (with Honors), summa cum laude</li>
+                <li>Cumulative GPA: 4.0</li>
+                <li>Rank: 1 out of 524</li>
+                <li>Dana Scholar</li>
+            </ul>
+        	
+            <h2><a class="toggle" href="#activities">Activities &amp; Societies</a></h2>
+            <ul class="more" id="activities">
+                <li>Ciarla Yearbook (Member, 2008 – 2012; Editor-in-Chief, Fall 2010 – Spring 2012)</li>
+                <li>Kappa Kappa Psi National Honorary Band Fraternity (Honorary Brother, initiated May 2011)</li>
+                <li>Omicron Delta Kappa National Leadership Honor Society (inducted Spring 2011)</li>
+            </ul>
+        
+            <h2><a class="toggle" href="#honors">Honors &amp; Awards</a></h2>
+            <ul class="more" id="honors">
+                <li>Phi Beta Kappa, 2011</li>
+                <li>Presenter, Economics Scholars Program for Undergraduate Research, 2011 - 2012</li>
+                <li>The Kyle M. Larsson Memorial Scholarship Award in Business and Economics, 2011</li>
+                <li>Outside the Classroom Multimedia/Social Marketing Campaign Competition First Place Entry, 2009</li>
+                <li>Presenter, Lehigh Valley Association of Independent Colleges Women's Studies Conference, 2009</li>
+                <li>American Association of University Women Commendation for Excellence in Mathematics, 2008</li>   
+            </ul>
+			<hr/>
+			<h2>Experience</h2>     
+			<% jobs.forEach(function(job, index) { %>           
+			<h3><a class="toggle" href="#exp-<%= index %>"><%= job.title %></a></h3>
+			<p class="location"><%= job.company %><br/><%= job.location %><br/><%= job.time %><%if (job.isCurrent) { %> <span id="counter"></span><% } %></p>
+			<ul class="more" id="exp-<%= index %>">
+				<% job.description.forEach(function(item) { %>
+				<li><%= item %></li>
+				<% }); %>
+			</ul>
+			<% }); %>
+
+			<hr/>
+            <h2>Technical/Software Proficiencies</h2>
+            <h3>Development</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+				<li>SCSS/SASS</li>
+                <li>Javascript/jQuery</li>
+                <li>ASP.NET MVC 4</li>
+            </ul>
+
+            <h3>Creative</h3>
+            <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>InDesign</li>
+                <li>Dreamweaver/Flash</li>
+                <li>Digital video production and still photography</li>
+                <li>Final Cut Pro</li>
+            </ul>
+
+            <h3>Other</h3>
+            <ul>
+                <li>Microsoft Office Suite</li>
+		        <li>Social Media/Blogging Platforms (Facebook, Twitter, Wordpress, LinkedIn, Blogger, Tumblr, Hootsuite)</li>
+            </ul>
+		</div>
+	</div>
+</section>

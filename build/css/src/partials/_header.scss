@@ -1,0 +1,251 @@
+header {
+	color: #fff;
+	font-size: 12px;
+	font-size: .75rem;
+	margin: 0 3px;
+	position: relative;
+	z-index: 3;
+	@include breakpoint($end_mobile) {
+		background: linear-gradient(top, #dddddd 0%, #dddddd 20%, #a4a2a3 100%);
+		background-color: #ddd;
+		border-bottom: 1px solid $purple_dk;
+		font-size: 13px;
+		font-size: rem(13);
+		line-height: 1.2em;
+		margin: 0;
+		text-shadow: 1px 1px 0 rgba(255,255,255,.35), -1px -1px 0 rgba(0,0,0,.05);
+	}
+	h1 {
+		float: left;
+		font-size: 1em;
+		margin: 0;
+		padding: 3px;
+		&:after {
+			background: sprite($ui, plumnomsmall);
+			content: "";
+			display: none;
+			height: sprite-height($ui, plumnomsmall);
+			width: sprite-width($ui, plumnomsmall);
+		}
+		@include breakpoint($end_mobile) {
+			color: #000;
+			padding-left: 60px;
+			position: relative;
+			text-shadow: 1px 1px 0 rgba(255,255,255,.4), -1px -1px 0 rgba(0,0,0,.05);
+			&:after {
+				display: block;
+				left: (60 - sprite-width($ui, plumnomsmall))/2;
+				position: absolute;
+				top: 1px;
+			}
+		}
+	}
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+#features {
+	@include breakpoint($end_mobile) {
+		float: right;
+		margin-right: 5px;
+	}
+	>li {
+		display: inline;
+		list-style: none;
+		@include breakpoint($end_mobile) {
+			display: inline-block;
+			float: left;
+			position: relative;
+			&.active, &.focused {
+				background: linear-gradient(top, lighten($purple, 10%), $purple);
+				background-color: $purple;
+			}
+		}
+	}
+	a {
+		cursor: default;
+		display: block;
+		overflow: hidden;
+		text-indent: -9999em;
+	}
+	#wifi {
+		background: sprite($features, wifi-sm);
+		background-position: sprite-position($features, wifi-sm, 0, -3px);
+		background-size: 29px auto;
+		float: left;
+		height: sprite-height($features, wifi-sm)/2;
+		margin: 5px 3px 0;
+		width: 29px;
+		@include breakpoint($end_mobile) {
+			background: sprite($features, wifi-lg);
+			background-position: sprite-position($features, wifi-lg, 2, sprite-height($features, wifi-lg)/-2 - 2);
+			background-size: 100% auto;
+			float: none;
+			height: sprite-height($features, wifi-lg)/2 + 1;
+			margin: 0 0 3px;
+			padding: 0 2px;
+			width: sprite-width($features, wifi-lg)/2;
+		}
+	}
+
+	#sound {
+		display: none;
+		@include breakpoint($end_mobile) {
+			background: sprite($features, sound-lg);
+			background-position: sprite-position($features,  sound-lg, 5px, -84px);
+			background-size: 32px auto;
+			display: block;
+			height: sprite-height($features, sound-lg)/2 + 1;
+			padding: 0 5px;
+			width: sprite-width($features, sound-lg)/2;
+		}
+	}
+
+	#battery {
+		background: sprite($features, battery-sm);
+		background-position: sprite-position($features, battery-sm, 0, -100px);
+		background-size: 100% auto;
+		float: right;
+		height: 11px;
+		margin: 4px 3px 0;
+		width: 30px;
+		@include breakpoint($end_mobile) {
+			background: sprite($features, battery-lg);
+			background-size: 100% auto;
+			background-position: sprite-position($features, battery-lg, 3px, 21px);
+			float: none;
+			height: sprite-height($features, battery-lg)/2;
+			margin: 0;
+			padding: 0 3px;
+			width: sprite-width($features, battery-lg)/2;
+		}
+	}
+	#battery-status {
+		float: right;
+		font-weight: bold;
+		margin: 2px 3px;
+		@include breakpoint($end_mobile) {
+			display: none;
+		}
+	}
+	
+	.active, .focused {
+		@include breakpoint($end_mobile) {
+			#battery {
+				background-position: sprite-position($features, battery-lg-over, 3px, 0);
+			}
+			#sound {
+				background-position: sprite-position($features, sound-lg-over, 5, -103px);
+			}
+			#wifi {
+				background-position: sprite-position($features, wifi-lg-over, 2, 99px);
+			}
+		}
+	}
+}
+
+
+#clock {
+	display: none;
+	@include breakpoint(385px) {
+		display: block;
+		@include borderbox;
+		display: block;
+		font-weight: bold;
+		text-align: center;
+		padding: 3px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	@include breakpoint($end_mobile) {
+		color: #000;
+		float: right;
+		font-weight: normal;
+		margin-right: 5px;
+		position: static;
+		width: auto;
+	}
+}
+
+.utility-content {
+    background: rgba(255,255,255,.98);
+    border: 1px solid #ccc;
+	border-top: 1px solid $purple_dk;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .15);
+    @include borderbox;
+    display: block;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+	z-index: 2;
+		    
+    li {
+		color: #000;
+		line-height: 1.5em;
+		padding: 0 15px;
+    }
+		    
+    &.wifi {
+		padding: 2px 0 5px;
+		width: 245px;
+		li {
+			cursor: default;
+		    float: none;
+			text-shadow: none;
+			&:after {
+				background: sprite($features, wifi-lg);
+				background-position: sprite-position($features, wifi-lg, 0, -89px);
+				background-size: 24px auto;
+				content: "";
+				display: block;
+				float: right;
+				height: 15px;
+				left: 8px;
+				opacity: .7;
+				position: relative;
+				width: 24px;
+			}
+		    &:hover, &:focus {
+				background: linear-gradient(top, lighten($purple, 10%), $purple);
+				background-color: $purple;
+				color: #fff;
+				&:after {
+					background-position: sprite-position($features, wifi-lg-over, 0, 2px);
+				}
+		    }
+		    &:first-child {
+				background: inline-image("loaders/wifispin.gif") no-repeat 95% 2px;
+				border-bottom: 1px solid #ccc;
+				color: #999;
+				margin-bottom: 5px;
+				padding: 2px 15px 5px;
+				&:hover, &:focus {
+				    background: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0));
+					background: inline-image("loaders/wifispin.gif") no-repeat 95% 2px;
+				    color: #777;
+				}
+				&:after {
+					display: none;
+				}
+		    }
+		}
+	}
+   
+    &.battery {
+		color: #999;
+		line-height: 1.5em;
+		padding: 5px 15px;
+		width: 200px;
+    }
+
+	&.sound {
+		padding: 5px 10px;
+	}
+}

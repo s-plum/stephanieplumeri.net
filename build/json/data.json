@@ -1,0 +1,259 @@
+{
+	"index": {
+		"page": "index",
+		"pageTitle": "Index",
+		"todo": [
+			"Make the Internet accessible, responsive, and optimized, one site at a time.",
+			"Top <a href=\"http://s-plum.tumblr.com/post/49652282547/presenting-the-seven-deadly-sins-cake-1-first\">this</a>",
+			"Read sci-fi, build LEGO, repeat as needed",
+			"Stockpile <a href=\"http://needsevenmorebutter.com/\">butter</a> for the holiday baking season"
+		],
+		"done": [
+			"Made text inputs <a href=\"http://s-plum.github.io/mindreader/\">psychic</a> (sort of)",
+			"Opened up a <a href=\"http://stephanieplumeri.net/plumlabs/\">diabolical online laboratory</a>",
+			"Got <a href=\"https://github.com/s-plum/boilerplum\">slushy</a> with gulp",
+			"Taught the world how web development is like <a href=\"http://www.youtube.com/watch?v=I44qOo33zME\">baking a cupcake</a>... then did it <a href=\"http://www.youtube.com/watch?v=mmlFScJiUIg\">again</a>... and <a href=\"http://www.youtube.com/watch?v=rhoi9jlpwWE\">again</a>... and <a href=\"http://www.youtube.com/watch?v=ZpjTZ8MRSew\">once more</a> for good measure"
+		]
+	},
+	"about": {
+		"page": "about",
+		"pageTitle": "About"
+	},
+	"portfolio": {
+		"page": "portfolio",
+		"pageTitle": "Portfolio",
+		"sites": [
+			{
+				"name": "Plum Labs",
+				"description": "Diabolical development laboratory - design, development, all links",
+				"url": "http://stephanieplumeri.net/plumlabs/",
+				"class": "plum",
+				"hasTime": true
+			},
+			{
+				"name": "Plum's Noms",
+				"description": ">Straight-up food porn - design, development, photography, noms",
+				"url": "http://stephanieplumeri.net/plumsnoms/",
+				"class": "noms",
+				"hasTime": false
+			},
+			{
+				"name": "PlumTube",
+				"description": "jQuery YouTube channel/playlist feed generator - development",
+				"url": "http://stephanieplumeri.net/plumlabs/plumtube/",
+				"class": "plumtube",
+				"hasTime": false
+			},
+			{
+				"name": "plumcube",
+				"description": "Compass extension for creating 3D cubes with CSS - development",
+				"url": "http://stephanieplumeri.net/plumlabs/plumcube/",
+				"class": "plum",
+				"hasTime": false
+			},
+			{
+				"name": "TD Ameritrade Careers",
+				"description": "Corporate careers site - responsive template/functionality development",
+				"url": "http://careers.tdameritrade.com/",
+				"class": "td",
+				"hasTime": true
+			},
+			{
+				"name": "Sungard AS Careers",
+				"description": "Corporate careers site - responsive template/functionality development",
+				"url": "http://talent.sungardas.com/",
+				"class": "sungard",
+				"hasTime": false
+			},
+			{
+				"name": "Respond",
+				"description": "Responsive web design basic training - presentation, design, development",
+				"url": "http://ui.tmp.com/projects/respond/",
+				"class": "superfriends",
+				"hasTime": false
+			},
+			{
+				"name": "Is This Website Broken?",
+				"description": "Web. Standards. - design, development",
+				"url": "http://isthiswebsitebroken.com/",
+				"class": "broken",
+				"hasTime": true
+			},
+			{
+				"name": "Needs Even More Butter",
+				"description": "Web-based butter supply - design, development",
+				"url": "http://needsevenmorebutter.com/",
+				"class": "butter",
+				"hasTime": false
+			},
+			{
+				"name": "Instagabby",
+				"description": "Instantly add my friend Gabby to any photo on the web - design, development",
+				"url": "http://stephanieplumeri.net/plumlabs/instagabby/",
+				"class": "instagabby",
+				"hasTime": false
+			},
+			{
+				"name": "Decision Machine",
+				"description": "Restaurant selection tool for the hungry and indecisive - design, development",
+				"url": "http://stephanieplumeri.net/plumlabs/decisionmachine/",
+				"class": "plum",
+				"hasTime": false
+			}
+		],
+		"images": [
+			{
+				"filename": "fandom.jpg",
+				"alt": "media fandom infographic"
+			},
+			{
+				"filename": "blue-beanie-poster.jpg",
+				"alt": "web standards day poster"
+			},
+			{
+				"filename": "superfriends.jpg",
+				"alt": "TMP User Interface Superfriends logo"
+			},
+			{
+				"filename": "cheesecake.jpg",
+				"alt": "cheesecake graphic"
+			},
+			{
+				"filename": "muhlencake.jpg",
+				"alt": "Muhlenberg College birthday card design"
+			},
+			{
+				"filename": "speakingPoster.jpg",
+				"alt": "human communication flowchart"
+			},
+			{
+				"filename": "whyNot.jpg",
+				"alt": "futurama zoidberg fan graphic"
+			},
+			{
+				"filename": "bluebeanie.jpg",
+				"alt": "web standards logo"
+			},
+			{
+				"filename": "ciarla2011.jpg",
+				"alt": "Muhlenberg College 2012 yearbook cover"
+			},
+			{
+				"filename": "hotdogs.jpg",
+				"alt": "dining establishment promotional signage"
+			},
+			{
+				"filename": "javajoe.jpg",
+				"alt": "coffee shop loyalty card"
+			},
+			{
+				"filename": "muleopoly.jpg",
+				"alt": "parody game board"
+			},
+			{
+				"filename": "proclamation.jpg",
+				"alt": "Harry Potter-themed dinner invitation"
+			},
+			{
+				"filename": "zorbo.jpg",
+				"alt": "Zorbo!"
+			}
+		]
+	},
+	"resume": {
+		"page": "resume",
+		"pageTitle": "Resume",
+		"jobs": [
+			{
+				"title": "UI/Front End Developer",
+				"company": "TMP Worldwide",
+				"location": "New York, NY",
+				"time": "June 2012 - Present",
+				"isCurrent": true,
+				"description": [
+					"User interface development for corporate recruitment websites and internal content management systems", 
+					"Consultant on accessibility standards and development best practices for software development team", 
+					"Building out sites according to client branding guidelines and business rules for functionality, while upholding web standards", 
+					"Developing fully responsive site templates using mobile-first programming strategies",
+					"Actively promoting web standards and development best practices across among both developers and non-technical team members",
+					"Maintaining documentation for new products and site features",
+					"Coordinating and executing responsive development training sessions for design teams in multiple offices across the United States",
+					"Working with project managers to troubleshoot websites and modify templates according to client requests"
+				]
+			},
+			{
+				"title": "Marketing Intern - Muhlenberg College",
+				"company": "Sodexo, Inc.",
+				"location": "Allentown, PA",
+				"time": "January 2011 - May 2012 (1 year 5 months)",
+				"isCurrent": false,
+				"description": [
+					"Worked with marketing team to develop advertising campaigns for events and initiatives to increase student interactivity with Dining Services social media outlets",
+					"Established style guide to maintain consistency in design across multiple dining locations",
+					"Regularly updated Facebook pages of both Muhlenberg and other regional colleges/universities",
+					"Created Facebook sidebar application template for campus dining menus and locations, currently used district-wide",
+					"Scripted, filmed, and edited video of annual Chef’s Fair to use as promotional material",
+					"Food styling, photography, and layout for monthly nutrition newsletter"
+				]
+			},
+			{
+				"title": "Web Consultant, ABE Department",
+				"company": "Muhlenberg College",
+				"location": "Allentown, PA",
+				"time": "May 2011 - May 2012 (1 year 1 month)",
+				"isCurrent": false,
+				"description": [
+					"Developed a web interface and related content with the goal of enhancing the relevance of the present website to both current and incoming students in the Accounting, Business, Economics, and Finance Departments",
+					"Facebook and Google Calendar integration for future event promotion, including providing guidelines for social media marketing to faculty"
+				]
+			},
+			{
+				"title": "Graphic/Web Design, Senior Year Experience",
+				"company": "Muhlenberg College",
+				"location": "Allentown, PA",
+				"time": "January 2009 - December 2011 (3 years)",
+				"isCurrent": false,
+				"description": [
+					"Migrated web content to new template as part of a college-wide web upgrade",
+					"Generated text and images on a weekly basis to reflect seasonal themes and upcoming programs",
+					"Designed print and web campaign (including brochures, posters, YouTube commercials, and web page) encouraging seniors to register for the annual “Reality MC” weekend seminar on transitioning out of college",
+					"Covered events spanning the 2011 “Senior Week” and compiled video footage into a 2-minute synopsis highlighting the importance of inter-departmental cooperation in organizing the week’s programs"
+				]
+			},
+			{
+				"title": "Research Assistant",
+				"company": "Muhlenberg College",
+				"location": "Allentown, PA",
+				"time": "January 2009 - January 2011 (2 years 1 month)",
+				"isCurrent": false,
+				"description": [
+					"Worked on projects for both the History (January 2009 - May 2009, January 2010 to May 2010) and Media & Communication (September 2010 - January 2011) departments",
+					"Performed preliminary reviews of academic research on the subject of audience analysis",
+					"Designed original and re-created existing infographics to illustrate important concepts related to audience analysis",
+					"Previewed and catalogued historical films on Latin America",
+					"Developed system of data entry for cataloguing historical film revenue data"
+				]
+			},
+			{
+				"title": "Social Networking Intern",
+				"company": "Greater Lehigh Valley Chamber of Commerce",
+				"location": "Bethlehem, PA",
+				"time": "May 2010 - August 2010 (4 months)",
+				"isCurrent": false,
+				"description": [
+					"Analyzed data on Twitter and blog posts to determine most popular topics, peak daily viewership times, and effectiveness of passive versus active verbiage in attracting users to click links",
+					"Conducted extensive research on social media use for business",
+					"Wrote regular blog posts on new web tools for business organization and analytics"
+				]
+			}
+		]
+	},
+	"web-standards": {
+		"page": "web-standards",
+		"pageTitle": "Web Standards"
+	},
+	"404": {
+		"page": "404",
+		"pageTitle": "404 Error"
+	}
+}

@@ -1,0 +1,33 @@
+@mixin breakpoint($break) {
+	@media screen and (min-width: $break) {
+		@content;
+	}
+}
+
+@mixin wai {
+	border: 0;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	text-indent: -999em;
+}
+
+@mixin ui {
+	background: linear-gradient(top, #f1f1f1 0%, #cbcbcb 50%, #b1b1b1 100%);
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #505050;
+	cursor: default;
+	display: block;
+	font-size: .8375rem;
+	line-height: 1rem;
+	padding: 2px;
+	position: relative;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(255,255,255,.5), -1px -1px 0 rgba(0,0,0,.1);
+}
+
+@mixin borderbox {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

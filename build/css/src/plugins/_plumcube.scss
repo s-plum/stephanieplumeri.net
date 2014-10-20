@@ -1,0 +1,90 @@
+/* ==================================================
+import helper functions
+================================================== */
+@import 'plumcube/helpers';
+
+/* ==================================================
+cube it up
+================================================== */
+@mixin plumcube($x, $y, $z, $perspective, $origin) {
+	/* ====================================================================================
+	where
+		$x = cube width, in pixels
+		$y = cube length, in pixels
+		$z = cube depth, in pixels
+		$perspective = distance of shape from screen along z-axis
+					   (smaller numbers create more shape/perspective distortion)
+		$origin = defines the origin of the 3D perspective
+		          (see https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin
+				   for all possible values)
+	==================================================================================== */
+	
+	@include perspective($perspective+px);
+    @include perspective-origin($origin);
+	width: $x + px;
+	height: $y + px;
+	.cube-z, .cube-y, .cube-x {
+		@include transform-style(preserve-3d);
+		@include transition(all 1s ease-in-out);
+	}
+	.cube-x {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: $x + px;
+		height: $y + px;
+		
+		li {
+			display: block;
+			position: absolute;
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+				height: $y+px;
+			}
+			&:nth-child(5), &:nth-child(6) {
+				height: $z+px;
+			}
+			&:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(6) {
+				width: $x+px;
+			}
+			&:nth-child(2), &:nth-child(4) {
+				width: $z+px;
+			}
+			&:nth-child(1) {
+				@include transform(translateZ(($z/2)+px));
+			}
+			&:nth-child(2) {
+				@include transform(rotateY(90deg) translateZ($x - ($z/2)+px));
+			}
+			&:nth-child(3) {
+				@include transform(rotateY(180deg) translateZ(($z/2)+px));
+			}
+			&:nth-child(4) {
+				@include transform(rotateY(-90deg) translateZ(($z/2)+px));
+			}
+			&:nth-child(5) {
+				@include transform(rotateX(90deg) translateZ(($z/2)+px));
+			}
+			&:nth-child(6) {
+				@include transform(rotateX(90deg) translateZ(-($y - ($z/2))+px));
+				
+			}
+		}
+	}
+}
+
+/* ==================================================
+360-degree cube rotation
+================================================== */
+@mixin spincube($axis, $speed, $reverse:"") {
+	/* ====================================================================================
+	where
+		$axis = axis to spin
+		$speed = time it takes to complete one rotation, in seconds or milliseconds
+	==================================================================================== */
+	@if $reverse != "" {
+		@include private-animation(spin+to_upper_case($axis) $speed linear infinite reverse);
+	} @else {
+		@include private-animation(spin+to_upper_case($axis) $speed linear infinite);
+	}
+}

@@ -1,0 +1,39 @@
+/* ==================================================
+keyframes animation builder -> adds -webkit prefix
+================================================== */
+@mixin private-keyframes ($animation_name) {
+	@-webkit-keyframes #{$animation_name} {
+		@content;
+	}
+	@keyframes #{$animation_name} {
+		@content;
+	}
+}
+/* ==================================================
+animation property builder -> adds -webkit prefix
+================================================== */
+@mixin private-animation($params) {
+	animation: $params;
+    -webkit-animation: $params;
+}
+
+/* ==================================================
+css transform for 360-degree spin
+================================================== */
+@mixin spin($axis) {
+	@include private-keyframes(spin+$axis) {
+		from {
+			@include transform(rotate+$axis+'(0deg)');
+		}
+		to {
+			@include transform(rotate+$axis+'(360deg)');
+		}
+	}
+}
+
+/* ==================================================
+define 360-degree spin for each axis
+================================================== */
+@include spin(X);
+@include spin(Y);
+@include spin(Z);

@@ -1,0 +1,160 @@
+@import "../img/plumbox/*.png";
+#plumbox-overlay {
+	background: rgba(0,0,0,.75);
+	opacity: 0;
+	overflow: auto;
+}
+#plumbox {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+	display: block;
+	left: 0;
+	max-height: 75%;
+	margin: 5% auto 0;
+	max-width: 600px;
+	transition: all 200ms ease;
+	transition-property: opacity, left;
+	opacity: 1;
+	position: relative;
+	width: 95%;
+	z-index: 9999;
+	-webkit-transform: translateZ(0);
+	&.moveleft {
+		left: -10%;
+		opacity: 0;
+		&.pre-bounce {
+			left: 10%;
+			opacity: 0;
+			transition: none;
+		}
+	}
+	&.moveright {
+		left: 10%;
+		opacity: 0;
+		&.pre-bounce {
+			left: -10%;
+			opacity: 0;
+			transition: none;
+		}
+	}
+}
+#plumbox-ajax {
+	background: inline-image("loaders/ajax.gif");
+	height: 55px;
+	left: 50%;
+	margin: -28px 0 0 -27px;
+	opacity: .7;
+	position: absolute;
+	width: 54px;
+	top: 50%;
+	z-index: 9998;
+}
+#plumbox-iframe, #plumbox-youtube {
+	border-radius: 5px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	margin-bottom: -5px;
+	width: 100%;
+}
+#plumbox-iframe {
+	height: 550px;
+}
+#plumbox-youtube {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 0 56.25%;
+	position: relative;
+}
+#plumbox-youtube iframe {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+#plumbox-image {
+	height: 100%;
+	position: relative;
+}
+#plumbox-image img {
+	border-radius: 5px;
+	display: block;
+	height: auto;
+	margin: auto;
+	width: 100%;
+}
+#plumbox-close {
+	@include borderbox;
+	background: $purple;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+	display: block;
+	height: 35px;
+	opacity: .7;
+	overflow: hidden;
+	position: absolute;
+	right: 5px;
+	text-indent: -9999em;
+	text-decoration: none;
+	top: 5px;
+	width: 35px;
+	z-index: 2;
+	&:hover, &:focus {
+		border: 3px solid #fff;
+		opacity: 1;
+		&:after {
+			left: -1px;
+			top: -1px;
+		}
+	}
+}
+#plumbox-close:after {
+	@include plumbox-sprite("close");
+	content: "";
+	display: block;
+	left: 0;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	text-indent: 0;
+	top: 0;
+	width: 100%;
+}
+.plumbox-nav {
+	@include plumbox-sprite("next");
+	background-size: 50% auto;
+	bottom: 5px;
+	display: block;
+	height: 39px;
+	opacity: .4;
+	overflow: auto;
+	position: absolute;
+	width: 50px;
+	text-indent: -9999em;
+	z-index: 9999;
+	@include transition(opacity 200ms linear);
+	&.disabled, &.disabled:hover, &.disabled:focus {
+		cursor: default;
+		opacity: 0;
+	}
+	&:hover, &:focus {
+		opacity: 1;
+	}
+	@include breakpoint($end_mobile) {
+		margin-top: -20px;
+		top: 50%;
+	}
+}
+#plumbox-next {
+	background-position: right -27px;
+	right: 5px;
+}
+#plumbox-prev {
+	background-position: 0 -68px;
+	left: 5px;
+}

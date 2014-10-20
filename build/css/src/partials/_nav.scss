@@ -1,0 +1,216 @@
+#skip-to-nav, #skip-to-content {
+	@include wai;
+}
+
+footer {
+	@include breakpoint($end_mobile) {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
+	nav {
+		background: linear-gradient(top, rgba(66,24,78,.85), rgba(47,0,61,.98));
+		background-color: $purple_dk;
+		bottom: 0;
+		height: 80px;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		@include breakpoint($large_mobile) {
+			height: 93px;
+		}
+		@include breakpoint($end_mobile){
+			background: none;
+			background-color: transparent;
+			height: auto;
+			left: 50%;
+			margin: 0 0 0 -135px;
+			min-width: 270px;
+			position: absolute;
+			width: 270px;
+			&:after {
+				background: linear-gradient(top, rgba(115,114,114,0.7) 0%, rgba(136,134,135,0.7) 55%, rgba(113,112,112,0.7)55%, rgba(136,134,135,0.7) 100%);
+				background-color: rgb(115,114,114);
+				border-bottom: 2px solid #c4c3c3;
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 55%;
+				left: 0;
+				position: absolute;
+				@include perspective-origin(50% 100%);
+				@include transform(perspective(100px) rotateX(20deg));
+				width: 100%;
+				z-index: 0;
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		margin: auto;
+		max-width: 325px;
+		text-align: center;
+		@include breakpoint($large_mobile) {
+			max-width: 400px;
+		}
+		@include breakpoint($end_mobile) {
+			left: -3px;
+			position: relative;
+		}
+	}
+	li {
+		display: inline-block;
+		width: 23.8%;
+		@include breakpoint($end_mobile) {
+			width: auto;
+		}
+	}
+	$smallw: 56px;
+	$largew: 70px;
+	$smallh: 54px;
+	$largeh: 67px;
+	a {
+		border-radius: 14px;
+		display: block;
+		height: $smallh;
+		margin: 7px auto;
+		position: relative;
+		width: $smallw;
+		z-index: 2;
+		span {
+			color: #fff;
+			display: inline-block;	
+			font-size: 11px;
+			font-size: rem(11);
+			margin-top: 55px;
+			line-height: 16px;
+			line-height: rem(16);
+			width: 100%;
+			@include transition(background 200ms linear);
+			@include breakpoint($large_mobile) {
+				margin-top: 68px;
+				font-size: 12px;
+				font-size: rem(12);
+			}
+			@include breakpoint($end_mobile) {
+				font-size: 14px;
+				font-size: rem(14);
+				position: absolute;
+				text-shadow: 2px 1px 2px rgba(0,0,0,0.7);
+				top: -2.5em;
+				@include transition(none);
+				visibility: hidden;
+				z-index: -1;
+			}
+		}
+		&:hover, &:focus {
+			span {
+				background: rgba(0,0,0,.4);
+				border-radius: 5px;
+				@include breakpoint($end_mobile) {
+					background: rgba(0,0,0,.6);
+					border-radius: 20px;
+					margin: 0;
+					padding: 2px 10px;
+					visibility: visible;
+					width: auto;
+					z-index: 3;
+					&:after {
+						border-color: rgba(0,0,0,.6) transparent transparent;
+						border-style: solid;
+						border-width: 7px 6px;
+						bottom: -14px;
+						content: "";
+						display: block;
+						height: 0;
+						left: 50%;
+						margin-left: -6px;
+						overflow: hidden;
+						position: absolute;
+						width: 0;
+					}
+				}
+			}
+		}
+		@include breakpoint($large_mobile) {
+			height: $largeh;
+			width: $largew;
+		}
+		@include breakpoint($end_mobile) {
+			border-radius: 0;
+			margin: auto;
+			&.running:after {
+				background: rgba(243,239,251,.8);
+				border-radius: 50%;
+				bottom: 3px;
+				box-shadow: 0 0 8px 2px rgba(243,239,251,.7);
+				content: "";
+				display: block;
+				height: 4px;
+				left: 50%;
+				margin-left: -5px;
+				position: absolute;
+				width: 10px;
+			}
+		}
+	}
+	$navlinks : (
+		home: .05em,
+		about: -.3em,
+		portfolio: -.875em,
+		resume: -1em
+	);
+
+	@for $i from 1 through length($navlinks) {
+		$item: nth($navlinks, $i);
+		$navlink: nth($item, 1);
+		$adjust: nth($item, 2);
+		##{$navlink} {
+			background: sprite($dock, #{$i}#{$navlink}-touch);
+			background-position: sprite-position($dock, #{$i}#{$navlink}-touch, 0, ($i - 1)*($smallh - 11));
+			background-size: $smallw auto;
+			@include breakpoint($large_mobile) {
+				background-position: sprite-position($dock, #{$i}#{$navlink}-touch, 0, ($i - 1)*($largeh - 38));
+				background-size: $largew auto;
+			}
+			@include breakpoint($end_mobile) {
+				background-position: sprite-position($dock, #{$navlink});
+				background-size: auto;
+				height: sprite-height($dock, #{$navlink});
+				width: sprite-width($dock, #{$navlink});
+				span {
+					left: $adjust;
+				}
+			}
+		}
+	}
+}
+
+#main-nav-top {
+	display: none;
+	@include breakpoint($end_mobile) {
+		display: block;
+		float: left;
+		margin-left: 10px;
+		li {
+			display: inline-block;
+			list-style: none;
+		}
+		a {
+			color: #222;
+			display: block;
+			height: 22px;
+			height: rem(22);
+			line-height: 1.7em;
+			padding: 0px 7px;
+			text-decoration: none;
+			&:hover, &:focus {
+				color: #fff;
+				@include background(linear-gradient(top, lighten($purple, 10%), $purple));
+				background: -ms-linear-gradient(top, lighten($purple, 10%), $purple);
+				background-color: $purple;
+				text-shadow: none;
+			}
+		}
+	}
+}

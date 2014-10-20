@@ -1,0 +1,22 @@
+@import "partials/base";
+.error {
+	background: #000;
+}
+
+#error {
+	color: #fff;
+	font-weight: bold;
+	padding-top: 15%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+footer nav {
+	@include background(linear-gradient(top, rgba(255,255,255,.1), rgba(255,255,255,0)));
+	background: -ms-linear-gradient(top, rgba(255,255,255,.1), rgba(255,255,255,0));
+	background-color: #000;
+	@include breakpoint($end_mobile) {
+		background: none;
+		background-color: transparent;
+	}
+}

@@ -1,0 +1,22 @@
+<section id="history" data-draggable="true">
+	<span class="ui">ChromeFox - History</span>
+	<div>
+		<h1><b id="history-title">History</b> <b id="history-date">Tuesday February 6th 2014</b></h1>
+		<ul>
+			<% sites.forEach(function(item) { %>
+			<%if (item.hasTime) { %><li class="time" aria-hidden="true"></li><% } %>
+			<li><a href="<%= item.url %>" class="<%= item.class %>"><%= item.name %> <span><%= item.description %></span></a></li>
+			<% }) %>
+		</ul>
+	</div>
+</section>
+<section id="image" data-draggable="true">
+	<span class="ui">iMage</span>
+	<div>
+		<ul data-plumgallery>
+			<% images.forEach(function(item) { %>
+			<li><a data-plumbox-type="image" href="/img/portfolio/<%= item.filename %>"><img src="/img/portfolio/thumbs/<%= item.filename %>" alt="<%= item.alt %>"/></a></li>
+			<% }) %>
+		</ul>
+	</div>
+</section>

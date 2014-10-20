@@ -1,0 +1,199 @@
+@import "partials/base";
+#contact {
+	background: #e5e5e5;
+	border-radius: 0;
+	bottom: 0;
+	color: #1f1f1f;
+	overflow: auto;
+	position: absolute;
+	top: .5em;
+	margin: 0 -10px;
+	width: 100%;
+	@include breakpoint($end_mobile) {
+		background: #ededed;
+		bottom: auto;
+		left: 50%;
+		margin: 20px 0 80px -155px;
+		top: auto;
+		width: 310px;
+	}
+	.ui {
+		background: #f5f5f3;
+		border-bottom: 1px solid #cacaca;
+		font-size: 16px;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 12px;
+		text-shadow: none;
+		@include breakpoint($end_mobile) {
+			@include ui;
+			font-size: 11px;
+			font-size: .7rem;
+			font-weight: normal;
+			line-height: 12px;
+			line-height: .75rem;
+		}
+		&:after {
+			display: none;
+			@include breakpoint($end_mobile) {
+				background-position: 0 -102px;
+				background-size: auto 114px;
+				display: block;
+				height: 11px;
+				margin: 3px 6px;
+			}
+		}
+	}
+	>div {
+		overflow: auto;
+		padding-bottom: 100px;
+		@include breakpoint($end_mobile) {
+			border: 1px solid #ababab;
+			border-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	#about-version {
+		background: #fff;
+		border-bottom: 1px solid #dcdcdc;
+		border-top: 1px solid #dcdcdc;
+		color: #1f1f1f;
+		font-size: 16px;
+		font-size: 1rem;
+		font-weight: normal;
+		margin: 1.5em 0;
+		padding: 10px 15px;
+		&:before {
+			background: sprite($ui, plumnombig) no-repeat;
+		}
+		@include breakpoint($end_mobile) {
+			background: none;
+			border: 0;
+			font-size: 26px;
+			font-size: rem(26);
+			font-weight: bold;
+			margin: 0 0 .5em;
+			padding: 110px 0 0;
+			position: relative;
+			text-align: center;
+			&:before {
+				background-size: 50%;
+				background-position: center -29px;
+				content: "";
+				display: block;
+				height: (sprite-height($ui, plumnombig)/2) - 2;
+				position: absolute;
+				top: 28px;
+				width: 100%;
+			}
+		}
+		span {
+			color: #858585;
+			display: block;
+			font-size: .875em;
+			@include breakpoint($end_mobile) {
+				font-size: 13px;
+				font-size: rem(13);
+				font-weight: normal;
+				margin-top: 5px;
+			}
+		}
+	}
+	a {
+		color: #858585;
+		display: block;
+		padding: 10px 15px 10px 0;
+		text-align: right;
+		text-decoration: none;
+		&:hover, &:focus {
+			color: #0081fe;
+			@include breakpoint($end_mobile) {
+				color: #1f1f1f;
+				text-decoration: underline;
+			}
+		}
+		b {
+			color: #1f1f1f;
+			float: left;
+			font-weight: normal;
+			@include breakpoint($end_mobile) {
+				display: inline-block;
+				font-weight: bold;
+				margin-right: 10px;
+				text-align: right;
+				width: 30%;
+			}
+		}
+		@include breakpoint($end_mobile) {
+			color: #1f1f1f;
+			font-size: 12px;
+			font-size: rem(12);
+			padding: 5px 10px;
+			text-align: left;
+		}
+	}
+	ul {
+		background: #fff;
+		border-bottom: 1px solid #dcdcdc;
+		border-top: 1px solid #dcdcdc;
+		list-style: none;
+		padding-left: 15px;
+		@include breakpoint($end_mobile) {
+			background: none;
+			border: none;
+			padding: 0;
+			width: 100%;
+		}
+	}
+	li {
+		border-bottom: 1px solid #dcdcdc;
+		&:last-child {
+			border-bottom: none;
+		}
+		@include breakpoint($end_mobile) {
+			border: 0;
+		}
+	}
+	#about-cc {
+		background: #fff;
+		border-bottom: 1px solid #dcdcdc;
+		border-top: 1px solid #dcdcdc;
+		margin: 1.5em 0;
+		padding: 10px 15px;
+		&:before {
+			background: inline-image("ui/cc.png");
+			background-size: 100%;
+			content: "";
+			display: inline-block;
+			height: 16px;
+			margin: 0 3px 0 0;
+			position: relative;
+			top: 2px;
+			width: 16px;
+			@include breakpoint($end_mobile) {
+				height: 11px;
+				opacity: .8;
+				width: 11px;
+			}
+		}
+		span {
+			color: #858585;
+			display: block;
+			font-size: .875em;
+			@include breakpoint($end_mobile) {
+				color: #5f5f5f;
+				font-size: 1em;
+			}
+		}
+		@include breakpoint($end_mobile) {
+			background: none;
+			border: none;
+			color: #5f5f5f;
+			font-size: 11px;
+			font-size: rem(11);
+			line-height: 1.3em;
+			margin: .5em 0 5px;
+			text-align: center;
+		}
+	}
+}

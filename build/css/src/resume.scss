@@ -1,0 +1,246 @@
+@import "partials/base";
+#drive {
+	line-height: 1.5em;	
+	@include breakpoint($end_mobile) {
+		height: 85%;
+		left: 3%;
+		margin: 0;
+		position: relative;
+		width: 85%;
+		top: 20px;
+	}
+	>#resume-content {
+		background: #eeeeee;
+		padding: 2px;
+		@include breakpoint($end_mobile) {
+			bottom: 0;
+			overflow: auto;
+			padding: 16px;
+			position: absolute;
+			top: 5.5em;
+		}
+	}
+	.ui {
+		border-bottom: 1px solid #b6b5b6;
+		border-radius: 5px 5px 0 0;
+		min-height: 1em;
+		padding: 12px 2px;
+		position: relative;
+		a {
+			border: 1px solid #999999;
+			border-radius: 3px 3px 0 0;
+			border-bottom: none;
+			bottom: 0;
+			color: #000;
+			display: block;
+			font-size: .92em;
+			font-weight: normal;
+			min-width: 12em;
+			padding: 5px 15px 3px 10px;
+			position: absolute;
+			text-align: left;
+			text-decoration: none;
+			text-shadow: none;
+			@include transition(background 100ms linear);
+			z-index: 1;
+			&:before {
+				content: "";
+				display: inline-block;
+				height: 16px;
+				margin: -1px 5px -1px 0px;
+				position: relative;
+				width: 16px;
+				top: 2px;
+			}
+			&.tab1 {
+				left: 10px;
+				&:before {
+					background: $purple sprite($ui, drive) no-repeat;
+					background-position: sprite-position($ui, drive, 0, 12px);
+					background-size: 650%;
+					border-radius: 2px;
+					-webkit-backface-visibility: hidden;
+				}
+			}
+			&.tab2 {
+				display: none;
+				left: 14em;
+				&:before {
+					background: sprite($ui, plumtube);
+				}
+				&.loading:before {
+					background: inline-image("loaders/ajax-small.gif");
+				}
+				.js & {
+					display: block;
+				}
+			}
+			&:hover, &:focus {
+				background: rgba(255,255,255,.5);
+			}
+			&.active {
+				background: #f1f1f1;
+				border-bottom: 1px solid #f1f1f1;
+				box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+				z-index: 2;
+			}
+			@include breakpoint($end_mobile) {
+				&.tab1 {
+					left: 75px;
+				}
+				&.tab2 {
+					left: 19.5em;
+				}
+			}
+		}
+		&:after {
+			display: none;
+			@include breakpoint($end_mobile) {
+				display: block;
+				margin: 13px 8px;
+			}
+		}
+	}
+	h1 {
+		background: #fff;
+		font-size: 18px;
+		font-size: rem(18);
+		font-weight: normal;
+		margin: 0;
+		padding: 10px 10px 10px 60px;
+		position: relative;
+		&:after {
+			background: $purple sprite($ui, drive) no-repeat center;
+			background-size: 50%;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 40px;
+			top: 0;
+		}
+		@include breakpoint($end_mobile) {
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+			z-index: 2;
+		}
+	}
+	.document {
+		background: #fff;
+		overflow: hidden;
+		padding: 1em;
+		@include breakpoint($end_mobile) {
+			box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+			padding: 2em;
+		}
+	}
+	p {
+		margin: 0;
+	}
+	h2 {
+		color: $purple;
+		font-size: 1.125em;
+	}
+	h3 {
+		font-size: 1em;
+		margin: 0 0 .25em;
+		span {
+			color: #444;
+			display: block;
+			font-size: .92em;
+			font-weight: normal;
+		}
+	}
+	ul {
+		margin: 0 0 .5em 2em;
+		li {
+			padding-bottom: .5em;
+		}
+	}
+	.location {
+		color: #444;
+		font-size: .92em;
+		line-height: 1.25em;
+		margin: -.5em 0 .5em;
+	}
+	hr {
+		border: none;
+		border-top: 1px solid $purple;
+		margin: 1em 0;
+	}
+	.more {
+		list-style: none;
+		height: auto;
+		margin: 0 0 .5em 0;
+		position: relative;
+		-webkit-transform: translateZ(0);
+		li {
+			padding-left: 2em;
+			position: relative;
+			&:before {
+				content: "\2022";
+				left: .8em;
+				position: absolute;
+			}
+		}
+		.js & { 
+			display: none;
+			&[aria-hidden="false"] {
+				display: block;
+			}
+		}
+	}
+	.toggle {
+		color: $purple;
+		text-decoration: none;
+		.js & {
+			cursor: pointer;
+			&:before {
+				content: "[+]";
+				display: inline-block;
+				font-size: 1em;
+				margin-right: 5px;
+				opacity: .6;
+				@include transition(opacity 100ms linear);
+			}
+			&:hover:before, &:focus:before {
+				opacity: 1;
+			}
+			&.expanded:before {
+				content: "[-]";
+			}
+		}
+	}
+	#resume-pdf {
+		background: $purple;
+		border-radius: 3px;
+		color: #fff;
+		display: inline-block;
+		float: right;
+		margin: 8px 0;
+		margin: .5rem 0;
+		padding: 2px 10px;
+		text-align: center;
+		text-decoration: none;
+		@include transition(background 100ms linear);
+		&:hover, &:focus {
+			background: lighten($purple, 10%);
+		}
+	}
+}
+#youtube-wrapper {
+	@include borderbox;
+	padding-bottom: 56.25%;
+	position: relative;
+	@include breakpoint($end_mobile) {
+		bottom: 0;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		top: 2.7em;
+	}
+}
+#youtube {
+	margin-bottom: -8px;
+	position: absolute;
+}
