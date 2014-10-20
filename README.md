@@ -10,12 +10,12 @@ Those who frequent this site (so, my mom and I) may notice that it looks almost 
 
 The ninth ~~doctor~~ stephanieplumeri.net introduces:
 
-*Local build process powered by [gulp.js](http://gulpjs.com/)
-*[EJS](http://www.embeddedjs.com/) templating
-*Image minification
-*Javascript concatenation/minification from [UglifyJS](https://github.com/mishoo/UglifyJS) ([gulp flavor](https://github.com/terinjokes/gulp-uglify/))
-*[Autoprefixer](https://github.com/postcss/autoprefixer) ([gulp flavor](https://www.npmjs.org/package/gulp-autoprefixer))
-*[Ender.js Jeesh](https://github.com/ender-js/jeesh) in place of jQuery
+* Local build process powered by [gulp.js](http://gulpjs.com/)
+* [EJS](http://www.embeddedjs.com/) templating
+* Image minification
+* Javascript concatenation/minification from [UglifyJS](https://github.com/mishoo/UglifyJS) ([gulp flavor](https://github.com/terinjokes/gulp-uglify/))
+* [Autoprefixer](https://github.com/postcss/autoprefixer) ([gulp flavor](https://www.npmjs.org/package/gulp-autoprefixer))
+* [Ender.js Jeesh](https://github.com/ender-js/jeesh) in place of jQuery
 
 The end result of all of these new toys put the site on a major browser diet:
 
