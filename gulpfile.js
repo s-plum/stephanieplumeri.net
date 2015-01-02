@@ -50,9 +50,9 @@ gulp.task('sassy', function() {
       errorHandler: onError
     }))
     .pipe(compass({
-      config_file: './config.rb',
-      css: './build/css',
-      sass: './build/css/src',
+      config_file: 'config.rb',
+      css: 'build/css',
+      sass: 'build/css/src',
       sourcemap: true
     }))
     .pipe(autoprefixer({
