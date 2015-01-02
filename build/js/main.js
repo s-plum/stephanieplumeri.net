@@ -142,14 +142,14 @@ function onPlayerReady() {
 		
 		//for number of months at current job on resume page
 		if ($('#drive #counter').length > 0) {
-			var tmpStart = new Date(2012, 5, 11);
+			var tmpStart = new Date(2014, 3, 01);
 			var months = Math.ceil((new Date() - tmpStart)/(1000*60*60*24*30));
 			var years = 0;
 			if (months >= 12) {
 				years = Math.floor(months/12);
 				months = months%12;
 			}
-			if(typeof(years)==='undefined'){ yText = ''; }
+			if(typeof(years)==='undefined'||years===0){ yText = ''; }
 		    else if (years === 1) { yText = years + ' year '; }
 		    else { yText = years + ' years '; }
 

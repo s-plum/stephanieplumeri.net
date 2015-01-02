@@ -165,11 +165,25 @@
 		"pageTitle": "Resume",
 		"jobs": [
 			{
+				"title": "UI Development Lead",
+				"company": "TMP Worldwide",
+				"location": "New York, NY",
+				"time": "April 2014 - Present",
+				"isCurrent": true,
+				"description": [
+					"UI lead in the development of a fully responsive internal content management web application to support TalentBrew, TMP’s core recruitment marketing software platform",
+					"Key driver behind a move to fully responsive development within the organization, coordinating a month-long intensive responsive design training program for over 70 designers and copywriters in 8 offices across 3 countries",
+					"Assess feasibility of new feature implementations through prototyping, and aid in both development and documentation of new product enhancements",
+					"Regularly review site proposals for accessibility and web standards compliance, as well as ability to translate fluidly to the responsive web",
+					"Actively promote web standards, mobile-first development, and use of new technology across all departments"
+				]
+			},
+			{
 				"title": "UI/Front End Developer",
 				"company": "TMP Worldwide",
 				"location": "New York, NY",
-				"time": "June 2012 - Present",
-				"isCurrent": true,
+				"time": "June 2012 - April 2014 (1 year 11 months)",
+				"isCurrent": false,
 				"description": [
 					"User interface development for corporate recruitment websites and internal content management systems", 
 					"Consultant on accessibility standards and development best practices for software development team", 
