@@ -165,17 +165,29 @@
 		"pageTitle": "Resume",
 		"jobs": [
 			{
+				"title": "Front End Engineer",
+				"company": "Genome",
+				"location": "New York, NY",
+				"time": "January 2015 - Present",
+				"isCurrent": true,
+				"description": [
+					"Develop fully responsive user interfaces for client projects of various sizes",
+					"Formalize code standards for the development team",
+					"Assess and optimize production build processes"
+				]
+			},
+			{
 				"title": "UI Development Lead",
 				"company": "TMP Worldwide",
 				"location": "New York, NY",
-				"time": "April 2014 - Present",
-				"isCurrent": true,
+				"time": "April 2014 - January 2015 (10 months)",
+				"isCurrent": false,
 				"description": [
 					"UI lead in the development of a fully responsive internal content management web application to support TalentBrew, TMP’s core recruitment marketing software platform",
 					"Key driver behind a move to fully responsive development within the organization, coordinating a month-long intensive responsive design training program for over 70 designers and copywriters in 8 offices across 3 countries",
-					"Assess feasibility of new feature implementations through prototyping, and aid in both development and documentation of new product enhancements",
-					"Regularly review site proposals for accessibility and web standards compliance, as well as ability to translate fluidly to the responsive web",
-					"Actively promote web standards, mobile-first development, and use of new technology across all departments"
+					"Assessed feasibility of new feature implementations through prototyping, and aided in both development and documentation of new product enhancements",
+					"Regularly reviewed site proposals for accessibility and web standards compliance, as well as ability to translate fluidly to the responsive web",
+					"Actively promoted web standards, mobile-first development, and use of new technology across all departments"
 				]
 			},
 			{
